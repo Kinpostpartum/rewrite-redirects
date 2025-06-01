@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const caption = params.get("c") || "";
+      const context = params.get("ctx") || "";
+
+      const prompt = `👋 Hi! Let’s change this caption — tell me exactly what’s not working or what you’d like to tweak. Don’t hold back, I love a bit of constructive criticism 😉\n\nCaption: ${caption}\n\nContext: ${context}`;
+
+      navigator.clipboard.writeText(prompt).then(() => {
+        window.location.href = "https://chat.openai.com/g/6833d287532481918fad5eb57306701b-good-launch-rewrite-bot";
+      });
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to your Rewrite Bot…</p>
+  </body>
+</html>
